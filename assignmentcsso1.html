@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css assignment</title>
+    <!-- internal css is used below -->
+    <style>
+        /* Internal CSS */
+        .internalcss{
+            background-color: blue;
+        }
+
+        /* BEM Naming Convention */
+        .paragraph {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .paragraph--important {
+            font-weight: bold;
+        }
+
+        .paragraph__header {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .paragraph__content {
+            font-style: italic;
+        }
+
+        
+    </style>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h1>Answers of the 23 Sept"23 Starting with CSS Assignment 01</h1>
+    <h2>so i am answering all the 3 questions </h2> <hr>
+    <h3>que 1. "Create a simple page with some div tags  and show diffrenet ways to add CSS as well as what happens when you target the same elemnts with inline, internal and external CSS. Also, utilize comments in the project where required" and the answer is given below.</h3>
+
+    <p>Basically there are three ways to add css to a html inline, internal and external. The inline has the most priority then the internal and then the external </p>
+    <!-- Inline CSS -->
+    <div style="background-color: red;">
+        <p>so this is a div with inline css as i gave command with style attribute to make the background color is red</p>
+    </div>
+    <!-- Internal CSS -->
+    <div class="internalcss">
+        <p>so this is a div tag with internal css as i gave the style tag command inside the head tag above and the background-color is blue</p>
+    </div>
+    <!-- External CSS -->
+    <div class="externalcss">
+        <p>so this is a div tag with external css as i had attached the file of css inside the head tag above and the background-color is green</p>
+    </div>
+
+    <p>
+        <ol>
+            <li>
+                <p>
+                    <b>Inline CSS:</b> The first div uses inline CSS, where styles are applied deirectly within the  htnl tag using the style attribute.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Internal CSS:</b> The second div uses internal CSS, where styles are defined inside the style tag within the head section of the html document.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>External CSS:</b>The third div uses external CSS. Although the external stylesheet is commented out in this example, it could be linked to a seperate style.css file where styles are difined in the same format as the internal CSS.
+                </p>
+            </li>
+
+            <h3>When you target the same element with inline, internal and external css the styles will be applied in the following order of priority from highest to lowest</h3>
+        </ol>
+        <ol>
+            <li>
+                <p>
+                    <b>Inline CSS:</b> Styles applied directly to the htnl element using the styles attribute . This method has the highest priority.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Internal CSS:</b>Styles defined within the style tag in the head section of the html document . These styles will override external styles but will be overridden by inline styles.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>External CSS:</b> Styles defined in an external stylesheet . These styels have the lowest prioprity and can be overridden by both inline and internal styles.
+                </p>
+            </li>
+        </ol>
+
+        Please note that the external CSS part is commented out in this example . if you create a seperate styles.css file and link it in the html , the external styles will take effect.
+    </p>
+    <br><hr>
+
+    <h3>que 2. "Build an html page with multiple paragraph each assigned a unique class name . Write CSS rules using class selectors to apply distinct styling to each paragraph . Follow the BEM naming convention and explain how you.ve named the classes"  and the answer is given below</h3>
+
+    <p>Certainly! Here's an example of an HTML page with multiple paragraphs, each assigned a unique class name following the BEM naming convention. I'll also provide CSS rules using class selectors to apply distinct styling to each paragraph, and I'll explain how I've named the classes based on BEM.</p>
+
+    <p class="paragraph paragraph--important">
+        <span class="paragraph__header">Important Note:</span> 
+        <span class="paragraph__content">This paragraph is important.</span>
+    </p>
+
+    <p class="paragraph">
+        <span class="paragraph__header">Regular Note:</span> 
+        <span class="paragraph__content">This paragraph is regular.</span>
+    </p>
+
+    <p class="paragraph">
+        <span class="paragraph__header">Another Note:</span> 
+        <span class="paragraph__content">This paragraph is also regular.</span>
+    </p>
+
+    <p> In this example:
+        <ul>
+            <li>.paragraph: This is a block-level class representing a generic paragraph. It sets basic styles shared among all paragraphs.</li>
+            <li>.paragraph--important: This is a modifier class applied to the first paragraph, indicating it is important. It modifies the font weight to make the text bold.</li>
+            <li>
+                .paragraph__header and .paragraph__content: These are element-level classes representing parts of the paragraph block. .paragraph__header styles the header part of the paragraph (e.g., "Important Note"), and .paragraph__content styles the content part of the paragraph (e.g., "This paragraph is important."). These classes are nested inside the .paragraph block to indicate their relationship.
+            </li>
+        </ul>
+    </p>
+    <p>
+        Following BEM, the classes are named based on the block (.paragraph) and its elements (.paragraph__header and .paragraph__content). The modifier class (.paragraph--important) is used to modify the appearance of a specific instance of the block. This naming convention provides clear and meaningful names, making it easier to understand the structure and purpose of the HTML elements and their corresponding CSS styles.
+    </p> <br><hr>
+
+    <h3>que 3. "Develop an html form with various input elements. Use CSS to style the form, including setting background color for input fields. Create a custom color palette for the form elements, and demonstrate how to apply opacity to one of the form sectors " and the answers is given below in a different file and i provided it</h3>
+    <a href="thirdanswer.htm" target="_blank">click here to get to third answer</a>
+
+</body>
+</html>
